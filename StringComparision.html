@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Compare two strings</h2>
+
+    <script>
+        let st1 = prompt("Enter the 1st string");
+        let st2 = prompt("Enter the 2nd string");
+
+// Case Sensitive :
+        if(st1.length !== st2.length){
+            document.writeln(st1, " is not equal to ", st2);
+        }
+        else if(st1 === st2){
+            document.writeln(st1, " is equal to ", st2);
+        }else{
+            document.writeln(st1, " is not equal to ", st2);
+        }
+    </script>
+</body>
+
+</html>
