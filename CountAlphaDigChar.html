@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str1 = prompt("Enter the text");
+        let alpha = 0;
+        let digit = 0;
+        let character = 0;
+        for (let i = 0; i < str1.length; i++) {
+            let char = str1[i];
+            if ((char >= 'A' && char <= 'Z') || (char >= 'a' && char <= 'z')) {
+                alpha++;
+            } else if (char >= 0 && char <= 9) {
+                digit++;
+            } else {
+                character++;
+            }
+        }
+        document.writeln("Total alphabets in the text are ", alpha, ", digits are ", digit, " and characters are ", character);
+    </script>
+</body>
+
+</html>
