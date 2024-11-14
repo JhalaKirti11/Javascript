@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Count the vowels and consonants in the text</h2>
+    <script>
+        let st = prompt("Enter the text");
+        document.writeln(st, "<br>");
+        let cons = 0;
+        let vow = 0;
+        st = st.toLowerCase();
+        for (let i in st) {
+            let ch = st.charCodeAt(i);
+            if (ch === 97 || ch === 101 || ch === 105 || ch === 111 || ch === 117) {
+                vow++;
+            } else if (ch > 98 && ch < 122) {
+                cons++;
+            } else {
+                continue;
+            }
+        }
+        document.writeln("Number of vowels ", vow, "<br>Number of consonants ", cons);
+    </script>
+</body>
+
+</html>
