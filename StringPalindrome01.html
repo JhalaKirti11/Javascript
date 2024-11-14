@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Palindrome String</h2>
+    <script>
+        let st = "kirti";
+        let palin = true;
+        for (let i = 0; i < st.length/2; i++) {
+            if (st.charAt(i) !== st.charAt(st.length - 1 - i)) {
+                palin = false;
+                break;
+            }
+        }
+        if (palin){
+            document.writeln(st, " : it is palindrome.");
+        }else{
+            document.writeln(st, " : is not palindrome!");
+        }
+    </script>
+</body>
+
+</html>
