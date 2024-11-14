@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Palindrome String</h2>
+    <script>
+        let st = prompt("Enter a word or a text");
+        let st2 = "";
+        for (let i of st) {
+            st2 = i+st2;
+        }
+        if(st === st2){
+        document.writeln(st, " is palindrome!");
+        }else{
+            document.writeln(st, " is not palindrome!");
+        }
+    </script>
+</body>
+
+</html>
