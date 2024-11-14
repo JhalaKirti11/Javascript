@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Factorial of a Number</h2>
+    <p><input type="number" placeholder="Enter thew number" id="num"></p>
+    <button type="button" onclick="calFact()">Factorial</button>
+    <p id="result"></p>
+
+    <script>
+        let fact = function (n) {
+            if (n === 0 || n === 1)
+                return 1;
+            n = n * fact(n - 1);
+            return n;
+        };
+
+        function calFact() {
+            let n = document.getElementById("num").value;
+            let r = fact(n);
+            document.getElementById("result").innerHTML=`Factorial of ${n} number is  ${r}`;
+        }
+    </script>
+</body>
+
+</html>
