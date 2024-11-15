@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Second largest element in the array</h2>
+    <script>
+        let arr = [3, 4, 6, 9, 8, 1, 11, 2];
+        let max = 0;
+        let smax = 0;
+        for (let i of arr) {
+            if (i > max) {
+                smax = max;
+                max = i;
+            } else if (i > smax && i < max) {
+                smax = i;
+            }
+        }
+        document.writeln("Second largest element : ", smax);
+        document.writeln("<br>largest element : ", max);
+    </script>
+</body>
+
+</html>
