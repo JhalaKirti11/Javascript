@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Binary Search</h2>
+    <script>
+        let arr = [12, 24, 27, 39, 46, 55, 61, 84, 93];
+        let elem = 674;
+        let start = 0;
+        let end = arr.length - 1;
+        let found = false;
+        while (start != end) {
+            let mid = (start + end) / 2;
+            if (arr[mid] === elem) {
+                found = true;
+                break;
+            }
+            else if (arr[mid] > elem) {
+                end = mid;
+            }
+            else {
+                start = mid;
+            }
+        }
+        if (found) {
+            document.writeln(elem + " exists in the array!");
+        }else{
+            document.writeln(elem+ " does not exists in the array!");
+
+        }
+
+    </script>
+</body>
+
+</html>
