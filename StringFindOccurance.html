@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>First occurrence of a character in the text:</h2>
+    <script>
+        let st = prompt("Enter the text");
+        let l = prompt("Enter the cahracter");
+        document.writeln(st, "<br>");
+        let index = 1;
+        for (let i of st) {
+            if (i === l) {
+                document.writeln(l, " is found on ", index);
+                break;
+            } else if (index === st.length - 1) {
+                document.writeln(l, " doesn't exist in '", st, "'");
+            }
+            index++;
+        }
+
+    </script>
+</body>
+
+</html>
