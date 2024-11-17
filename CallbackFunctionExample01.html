@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Call back function example 2 (Arrow function)</h2>
+    <script>
+        function call(a, b, callback) {       // higher order function
+            document.writeln("<br>pass a and b to arrow function by passing the reference callback");
+            let sum = callback(a, b);
+            return sum;
+        }
+
+        let arrow = (a, b) => a + b;       // arrow function
+
+        document.writeln("<br>pass arrow function as callback argument to call function with 2 other values");
+        
+        let sum = call(2, 3, arrow);      // arrow as call back function;
+        document.writeln("<br>Sum after all operations : ", sum);
+
+    </script>
+</body>
+
+</html>
