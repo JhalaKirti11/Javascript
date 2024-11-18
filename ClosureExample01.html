@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function foo() {
+            let b = 1;
+            function inner() {
+                let a = 20;
+                document.writeln(b,"<br>")
+                return 2;
+            }
+        //    document.write(a);  // we cannot access a here because it's a local variable;
+            return inner;       // it return the inner function's reference;
+        }
+        let ab = foo();         // calling foo() which is returning inner function's reference;
+
+        document.writeln(ab());     // calling f2()
+        document.writeln(ab());
+        document.writeln(ab());
+    </script>
+</body>
+
+</html>
