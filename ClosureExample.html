@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            let a = 23;
+            function f2(){
+                let b = 19;
+                return a;
+            }
+            return f2;
+        }
+        let ref = f1();
+        document.writeln("through the reference of inner : ", ref());
+    </script>
+</body>
+</html>
