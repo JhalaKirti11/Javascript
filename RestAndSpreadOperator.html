@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+// Spread and Rest operator :
+        function sum(a, b, c, d, ...others) {
+            document.writeln("Rest elements are stored in 'rest operator' : ", others);
+            document.writeln("<br>");
+            document.writeln("1st element : ",a);
+
+            console.log("arguments returns all the elements : ", arguments);
+            return a + b + c;
+        }
+        let arr = [2, 3, 5, 7, 9, 6, 4, 2]
+        let s = sum(...arr);
+    </script>
+</body>
+
+</html>
