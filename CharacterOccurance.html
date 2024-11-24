@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Specific Character Occurance</h2>
+    <script>
+        let st = prompt("Enter the text");
+        let char = prompt("Enter the character");
+        document.writeln("Text is : "+ st+"<br>");
+        document.writeln("Find Character : "+ char +"<br>");
+        
+        let count = 0;
+        for(let i of st){
+            if(i === char){
+                count++;
+            }
+        }
+        document.writeln(char, " occurs : ", count, " times");
+    </script>
+</body>
+</html>
