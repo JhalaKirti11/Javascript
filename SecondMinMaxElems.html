@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Second largest element in the array</h2>
+    <script>
+        let arr = [3, 4, 6, 7, 8, 11, 9, 1, 2];
+        let max = 0;
+        let smax = 0;
+        let min = 1000;
+        let smin = 1000;
+        console.log(min);
+        for (let i of arr) {
+            if (i > max) {
+                smax = max;
+                max = i;
+            } else if (i > smax && i < max) {
+                smax = i;
+            }
+            if (i < min) {
+                smin = min;
+                min = i;
+            } else if (i > min && smin > i) {
+                smin = i;
+            }
+        }
+
+        document.writeln("Second largest element : ", smax);
+        document.writeln("<br>largest element : ", max);
+
+        document.writeln("<br>Second smallest element : ", smin);
+        document.writeln("<br>Smallest element : ", min);
+
+    </script>
+</body>
+
+</html>
